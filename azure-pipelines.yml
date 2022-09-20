@@ -23,3 +23,8 @@ steps:
     repository: 'emirhanaydin61/web'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+- task: KubernetesManifest@0
+  inputs:
+    action: 'deploy'
+    kubernetesServiceConnection: 'kubernetes'
+    manifests: 'myweb.yaml'
