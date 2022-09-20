@@ -21,13 +21,7 @@ stages:
       vmImage: ubuntu-latest
     steps:
     - task: Docker@2
-      displayName: Build an image
       inputs:
-        command: build
-        dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
-        tags: |
-          $(tag)
-- task: Docker@2
-  inputs:
-    containerRegistry: 'dockerhublogin'
-    command: 'push'
+        containerRegistry: 'dockerhublogin'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
