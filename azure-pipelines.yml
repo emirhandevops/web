@@ -30,5 +30,4 @@ stages:
 - task: Docker@2
   inputs:
     containerRegistry: 'dockerhublogin'
-    repository: 'web'
     command: 'push'
