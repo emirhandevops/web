@@ -27,9 +27,5 @@ steps:
   inputs:
     connectionType: 'Kubernetes Service Connection'
     kubernetesServiceEndpoint: 'kubernetes'
-    namespace: 'web'
     command: 'apply'
     useConfigurationFile: true
-    configuration: 'myweb.yaml'
-    secretType: 'dockerRegistry'
-    containerRegistryType: 'Azure Container Registry'
