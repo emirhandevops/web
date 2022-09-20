@@ -27,4 +27,4 @@ steps:
   inputs:
     action: 'deploy'
     kubernetesServiceConnection: 'kubernetes'
-    manifests: 'myweb.yaml'
+    namespace: 'web'
